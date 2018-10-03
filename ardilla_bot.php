@@ -8,13 +8,13 @@
     //                                                                                            //
     //--------------------------------------------------------------------------------------------*/
 
-        $botToken="499399739:AAHZ7MIo_XN6uO1t2G3Kqno_hEdNwZsMmAU/";
+        $botToken="611130569:AAHXF-CIFbBUCwVqgPr4bCNLscy41xgZtM8";
         $website="https://api.telegram.org/bot".$botToken;
         $updateArray=file_get_contents($website."getUpdates");
 
         $updateArray=json_decode($updateArray,TRUE);
         $orden=count($updateArray);
-        print_r($orden)
+        print_r($orden);
        $chatId =   $updateArray["result"][1]["message"]["chat"]["id"];
        $chatType = $updateArray["result"][1]["message"]["chat"]["type"];
        $mensaje =  $updateArray["result"][1]["message"]["text"];
